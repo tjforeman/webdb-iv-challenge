@@ -11,9 +11,10 @@ function getDishes(){
 }
 function getDish(id){
     return db('dishes')
-    .where({id})
-    .first();
-}
+    .join('recipes','dishes.id','recipes.dish_id')
+    .select({name:'dishes.dish-name'},{recipe:'recipes.recipe-name'})
+    .where({"dishes.id": id })
+  }
 function addDish(dish){
     return db('dishes')
     .insert(dish)

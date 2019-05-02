@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('recipes').insert([
-        {'recipe-name': 'New York style', 'dish_id':1},
+        {'recipe-name': 'New York style', 'dish_id':1,},
         {'recipe-name': 'Deep Dish', 'dish_id':1},
         {'recipe-name': 'boiled', 'dish_id':2},
         {'recipe-name': 'fried','dish_id':2},
@@ -20,3 +20,16 @@ exports.seed = function(knex, Promise) {
       ]);
     });
 };
+
+//          {'ingredient-name': 'Tomatos'},1
+//         {'ingredient-name': 'cheese'},2
+//         {'ingredient-name': 'pasta'},3
+//         {'ingredient-name': 'garlic'},4
+//         {'ingredient-name': 'black-pepper'},5
+//         {'ingredient-name': 'sasauge'},6
+//         {'ingredient-name': 'peppers'},7
+//         {'ingredient-name': 'rice'},8
+//         {'recipe-name': 'basil'},9
+//         {'ingredient-name': 'oregano'},10
+//         {'ingredient-name': 'onion', },11
+//         {'ingredient-name': 'hamburger',},12
