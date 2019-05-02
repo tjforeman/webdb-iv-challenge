@@ -8,6 +8,8 @@ addRecipe
 
 function getRecipes(){
     return db('recipes')
+  .join('dishes','dishes.id','recipes.dish_id')
+  .select('recipes.id',{dish:'dishes.dish-name'},{recipe:'recipes.recipe-name'})
 }
 
 function getRecipe(id){
